@@ -1,4 +1,6 @@
 #Задание 1
+#Даны 2 переменных, в которых хранятся строки произвольной длины: phrase_1 и phrase_2.
+№Напишите код, который проверяет какая из этих строк длиннее.
 
 phrase_1 = 'Насколько проще было бы писать программы, если бы не заказчики'
 phrase_2 = '640Кб должно хватить для любых задач. Билл Гейтс (по легенде)'
@@ -9,3 +11,82 @@ elif len(phrase_1) < len(phrase_2):
     print("Фраза 2 длиннее фразы 1")
 else: 
     print("Фразы равной длины")
+
+
+#Задание 2
+#Дана переменная, в которой хранится четырехзначное число (год). Необходимо написать программу, которая выведет, является ли данный год високосным или обычным.
+
+a = int(input('Введите год: '))
+if ((a % 4 == 0) and not (a % 100 == 0)) or (a % 400 == 0):
+    print("Високосный год")
+else:    
+    print("Обычный год")
+    
+#Задание 3
+#Необходимо написать программу, которая будет запрашивать у пользователя месяц и дату рождения и выводить соответствующий знак зодиака.    
+    
+date = int(input('Введите день: '))
+month = int(input('Введите месяц: '))
+
+if (date>=21 and date<=31 and month==3) or ( month==4 and date>=1 and date<=20):
+   print("Ваш знак зодиака: Овен")
+
+elif (date>=21 and date<=30 and month==4) or ( month==5 and date>=1 and date<=21):
+   print("Ваш знак зодиака: Телец")
+
+elif (date>=22 and date<=31 and month==5) or ( month==6 and date>=1 and date<=21):
+
+   print("Ваш знак зодиака: Близнецы")
+
+elif (date>=22 and date<=30 and month==6) or ( month==7 and date>=1 and date<=22):
+
+   print("Ваш знак зодиака: Рак")
+
+elif (date>=23 and date<=31 and month==7) or ( month==8 and date>=1 and date<=21):
+
+   print("Ваш знак зодиака: Лев")
+
+elif (date>=22 and date<=31 and month==8) or ( month==9 and date>=1 and date<=23):
+
+   print("Ваш знак зодиака: Дева")
+
+elif (date>=24 and date<=30 and month==9) or ( month==10 and date>=1 and date<=23):
+
+   print("Ваш знак зодиака: Весы")
+
+elif (date>=24 and date<=31 and month==10) or ( month==11 and date>=1 and date<=22):
+
+   print("Ваш знак зодиака: Скорпион")
+
+elif (date>=23 and date<=30 and month==11) or ( month==12 and date>=1 and date<=22):
+
+   print("Ваш знак зодиака: Стрелец")
+
+elif (date>=23 and date<=31 and month==12) or ( month==1 and date>=1 and date<=20):
+
+   print("Ваш знак зодиака: Козерог")
+
+elif (date>=21 and date<=31 and month==1) or ( month==2 and date>=1 and date<=19):
+
+   print("Ваш знак зодиака: Водолей")
+
+elif (date>=20 and date<=29 and month==2) or ( month==3 and date>=1 and date<=20):
+
+   print("Ваш знак зодиака: Рыбы")
+   
+#Задание 4
+#Вам нужно написать программу для подбора упаковок по размерам товара. Размеры хранятся в переменных (в сантиметрах):
+
+width = int(input('Введите ширину: '))
+length = int(input('Введите высоту: '))
+height = int(input('Введите длину: '))
+
+if width <= 15 and length <= 15 and height <= 15: 
+   print('Стандартная коробка №1')
+elif (15 < width <= 50) or (15 < length <= 50)  or (15 < height <= 50):
+   print('Стандартная коробка №2')
+elif height >= 200:
+   print('Ищите упаковку для лыж') 
+else:    
+   print('Стандартная коробка №3')
+   
